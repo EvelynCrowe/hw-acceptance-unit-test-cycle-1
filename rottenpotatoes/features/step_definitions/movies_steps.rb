@@ -23,3 +23,9 @@ Then /I should see all the movies/ do
     step %{I should see "#{movie.title}"}
   end
 end
+
+Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |arg1, arg2|
+  movie = Movie.find_by(title: arg1)
+  visit movie_path(movie)
+  expect(page.body).to match(/Director:\s#{arg2}/)
+end
