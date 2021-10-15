@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Movie do
+describe MoviesController do
     describe 'find movies with same director' do
         before :each do
             Movie.create(:title => 'Star Wars', :rating => 'PG', :director => "George Lucas")
