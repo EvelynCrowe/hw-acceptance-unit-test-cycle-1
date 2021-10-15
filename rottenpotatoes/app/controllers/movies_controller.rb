@@ -40,6 +40,7 @@ class MoviesController < ApplicationController
   
   def find_movies_with_same_director
     @movies = Movie.find_movies_with_same_director(params[:id])
+    redirect_to movies_path
   end
 
   private

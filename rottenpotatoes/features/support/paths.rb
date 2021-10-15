@@ -18,7 +18,7 @@ module NavigationHelpers
         movie_path(Movie.find_by title: "#{$1}")
     when /^the edit page for "(.*)"$/
         edit_movie_path(Movie.find_by title: "#{$1}")
-    when /^the Find Movies With Same Director page for "(.*)"$/
+    when /^the show page for "(.*)"$/
         find_movies_with_same_director_path(Movie.find_by title: "#{$1}")
 
     # Add more mappings here.
